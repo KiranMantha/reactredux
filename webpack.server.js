@@ -4,6 +4,7 @@ const merge = require('webpack-merge');
 const buildFolder = path.resolve(__dirname, 'dist');
 
 module.exports = merge(config, {
+    watch: true,
     devServer: {
         contentBase: buildFolder,
         compress: true,
