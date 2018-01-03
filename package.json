@@ -13,8 +13,8 @@
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "*",
     "del": "*",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -28,14 +28,15 @@
     "style-loader": "*",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2",
-    "typings": "^2.1.1",
+    "uuid": "^3.1.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
+    "@types/react": "^16.0.33",
+    "@types/react-dom": "^16.0.3",
     "lodash": "^4.17.4",
-    "node-uuid": "^1.4.8",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
