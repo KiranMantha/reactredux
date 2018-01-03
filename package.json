@@ -1,0 +1,44 @@
+{
+  "name": "reactredux",
+  "version": "1.0.0",
+  "description": "simple react redux app",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js && webpack-dev-server --config webpack.server.js",
+    "build": "webpack --config webpack.config.js",
+    "serve": "webpack-dev-server --config webpack.server.js"
+  },
+  "author": "KiranMantha",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "css-loader": "*",
+    "del": "*",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "*",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "node-sass": "*",
+    "pre-build-webpack": "*",
+    "raw-loader": "*",
+    "sass-loader": "*",
+    "style-loader": "*",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "typings": "^2.1.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "node-uuid": "^1.4.8",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2"
+  }
+}
