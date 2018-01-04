@@ -35,11 +35,15 @@
   },
   "dependencies": {
     "@redux-offline/redux-offline": "^2.2.1",
+    "@types/lodash": "^4.14.91",
     "@types/react": "^16.0.33",
     "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
+    "@types/react-router": "^4.0.20",
     "lodash": "^4.17.4",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "*",
+    "react-dom": "*",
+    "react-redux": "*",
     "react-router": "^4.2.0",
     "redux": "^3.7.2"
   }
