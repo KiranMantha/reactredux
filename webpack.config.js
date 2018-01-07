@@ -10,6 +10,7 @@ const rootDir = path.resolve(__dirname);
 const buildFolder = path.resolve(__dirname, 'dist');
 
 const config = {
+    devtool: 'inline-source-map',
     /*
      * app.ts represents the entry point to your web application. Webpack will
      * recursively go through every "require" statement in app.ts and

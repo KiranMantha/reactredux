@@ -1,14 +1,24 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { Provider } from 'react-redux';
+import { render } from "react-dom";
+//import { Provider } from 'react-redux';
 import {TodoApp} from './components/todo/todoApp.component';
-import { configureStore } from './store/store';
+//import { configureStore } from './store/store';
 
-const store = configureStore();
+//const store = configureStore();
 
-ReactDOM.render(
-  <Provider store={store}>
-    <TodoApp />
-  </Provider>,
+const todos = [
+  {
+    text: 'test1',
+    id:'123'
+  },
+  {
+    text: 'test2',
+    id:'456'
+  }
+]
+
+
+render(
+    <TodoApp todos={todos}/>,
   document.getElementById("root")
 );
