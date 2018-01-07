@@ -1,25 +1,25 @@
 import { todoModel } from '../components/todo/models'
 
-export namespace STORE_CONSTANTS {
-    export const ACTIONS = {
+export const STORE_CONSTANTS = {    
+    ACTIONS: {
         ADD_TODO: 'ADD_TODO',
         TOGGLE_TODO: 'TOGGLE_TODO',
         SET_VISIBILITY_FILTER: 'SET_VISIBILITY_FILTER'
-    }
+    },
 
-    export const VisibilityFilters = {
+    VisibilityFilters: {
         SHOW_ALL: 'SHOW_ALL',
         SHOW_COMPLETED: 'SHOW_COMPLETED',
         SHOW_ACTIVE: 'SHOW_ACTIVE'
-    }
+    },
 
-    export const initialState = {
+    initialState: {
         visibilityFilter: VisibilityFilters.SHOW_ALL,
-        todos: new Array<todoModel>()
-    }
+        todos: []
+    },
 
-    export interface IState {
+    IState: {
         visibilityFilter: string,
-        todos: todoModel[]
-    }
+        todos: []
+    }    
 }

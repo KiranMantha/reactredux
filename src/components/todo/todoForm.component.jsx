@@ -4,10 +4,10 @@ import { addTodo } from '../../store/actions/todos_actions'
 import { Dispatch } from "redux";
 
 export class TodoForm extends React.Component {
-    constructor(props:any){
+    constructor(props){
         super(props);
     }
-    private input:HTMLInputElement;
+    input;
     render(){
         return (
             <div>
@@ -21,8 +21,8 @@ export class TodoForm extends React.Component {
     }
 }
 
-const todoFormMapDispatchToProps = (dispatch: Dispatch<any>) => ({
-    AddClick: (text:string) => dispatch(addTodo(text))
+const todoFormMapDispatchToProps = (dispatch) => ({
+    AddClick: (text) => dispatch(addTodo(text))
 });
 
 connect(todoFormMapDispatchToProps)(TodoForm);

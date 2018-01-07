@@ -34,7 +34,7 @@ const config = {
      * in your code.
      */
     resolve: {
-        extensions: [".tsx", ".ts", ".js", ".less"]
+        extensions: [".jsx", ".js", ".less"]
     },
 
     module: {
@@ -46,8 +46,14 @@ const config = {
          * installed ts-loader yet, but will do that shortly.
          */
         rules: [{
-                test: /\.tsx?$/,
-                loader: "ts-loader",
+                test: /\.(jsx|js)$/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['babel-preset-env','babel-preset-react']
+                    }
+                },
+                
                 exclude: /node_modules/
             },
             {
@@ -84,7 +90,8 @@ const config = {
         }),
         new ExtractTextPlugin({
             filename: "css/[name].css"
-        })
+        }),
+        new webpack.NoEmitOnErrorsPlugin()
     ]
 };
 
