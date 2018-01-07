@@ -11,6 +11,7 @@ export class Todo extends React.Component {
     }
     
     render(){
+        const {todo} = this.props;
         return(
             <li>{this.props.todo.text}</li>
         )
@@ -20,11 +21,11 @@ export class Todo extends React.Component {
 export class TodoList extends React.Component {
     constructor(props){
         super(props);  
-        console.log(this.props);      
     }   
     
     render(){
-        const todoNode = _.map(this.props.todos, (todo, index) => {
+        const {todos} = this.props;
+        const todoNode = _.map(todos, (todo, index) => {
             return (<Todo todo={todo} key={index} />)
         });
         return (<ul>{todoNode}</ul>);
