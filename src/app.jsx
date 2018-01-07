@@ -17,8 +17,22 @@ const todos = [
   }
 ]
 
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      todos
+    }
+  }
+  render(){
+    return (
+      <TodoApp todos={this.state.todos}/>
+    )
+  }
+}
+
 
 render(
-    <TodoApp todos={todos}/>,
+    <App />,
   document.getElementById("root")
 );
