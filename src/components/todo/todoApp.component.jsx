@@ -7,8 +7,8 @@ const idGenerator = require('uuid/v4');
 
 
 
-export class TodoApp extends React.Component<{}, istate> {
-    constructor(props: any) {
+export class TodoApp extends React.Component {
+    constructor(props) {
         super(props);        
     }
 
