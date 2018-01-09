@@ -1,6 +1,4 @@
-import { todoModel } from '../components/todo/models'
-
-export const STORE_CONSTANTS = {    
+const STORE_CONSTANTS = {
     ACTIONS: {
         ADD_TODO: 'ADD_TODO',
         TOGGLE_TODO: 'TOGGLE_TODO',
@@ -14,12 +12,9 @@ export const STORE_CONSTANTS = {
     },
 
     initialState: {
-        visibilityFilter: VisibilityFilters.SHOW_ALL,
+        visibilityFilter: 'SHOW_ALL',
         todos: []
-    },
-
-    IState: {
-        visibilityFilter: string,
-        todos: []
-    }    
+    } 
 }
+
+export default STORE_CONSTANTS;

@@ -1,4 +1,4 @@
-import { STORE_CONSTANTS } from '../constants'
+import STORE_CONSTANTS from '../constants'
 const idGenerator = require('uuid/v4');
 
 export const addTodo = (todo) => ({
