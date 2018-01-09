@@ -7,12 +7,9 @@ class TodoForm extends React.Component {
     constructor(props){
         super(props);
         this.input;
-        const {dispatch, onAddClick} = props;
-
-        console.log(this);
     }
     render(){
-    return(
+        return(
             <div>
                 <input ref={node => {
                 this.input = node;
