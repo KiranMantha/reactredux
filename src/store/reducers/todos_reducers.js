@@ -27,6 +27,7 @@ let todos = (state = [], action) => {
             break;
         }
         case STORE_CONSTANTS.ACTIONS.DELETE_TODO: {
+            //do not mutate state hence create new array
             let newArray = state.slice();
             newArray.splice(action.index, 1);
             return newArray;
