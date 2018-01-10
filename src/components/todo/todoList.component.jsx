@@ -2,13 +2,14 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Todo from './todoItem.component';
 import { connect } from 'react-redux';
-import STORE_CONSTANTS from '../../store/constants'
+import STORE_CONSTANTS from '../../store/constants';
+import { toggleTodo } from '../../store/actions/todos_actions';
 
 
 const TodoList = ({todos, onTodoClick}) => (
     <ul>{
         _.map(todos, (todo, index) => {
-            return (<Todo todo={todo} key={index} />)
+            return (<Todo todo={todo} key={index} onclick={onTodoClick}/>)
         })
     }</ul>
 )

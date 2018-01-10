@@ -6,12 +6,12 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 
 
-const Todo = ({todo}) => (
-    <li style={{textDecoration: todo.completed ? 'line-through' : 'none'}}>{todo.text}</li>
+const Todo = ({todo, onclick}) => (
+    <li style={{textDecoration: todo.completed ? 'line-through' : 'none'}} onClick={()=> {onclick(todo.id)}}>{todo.text}</li>
 )
 
 Todo.propTypes = {
-    //onClick: PropTypes.func.isRequired,
+    onclick: PropTypes.func.isRequired,
     todo: PropTypes.object.isRequired
 }
 

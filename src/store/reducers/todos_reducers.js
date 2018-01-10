@@ -17,7 +17,7 @@ let todos = (state = [], action) => {
         }
         case STORE_CONSTANTS.ACTIONS.TOGGLE_TODO: {
             return state.map((todo, index) => {
-                if (index === action.index) {
+                if (todo.id === action.id) {
                     return _.assign({}, todo, {
                         completed: !todo.completed
                     })
