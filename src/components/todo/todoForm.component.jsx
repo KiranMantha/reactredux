@@ -21,15 +21,20 @@ class TodoForm extends React.Component {
     }
 }
 
+//inject the data to state of component
 function mapStateToProps(state){
     return {}
 }
 
+//inject the actions to props
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
         onAddClick: addTodo
     }, dispatch)
 }
 
+//connect acts as a DI layer hence no need to pass props explicitly
+//the data in the store can be accessed via state through 'mapStateToProps'
+//the actions can be injected via 'mapDispatchToProps'
 TodoForm = connect(mapStateToProps, mapDispatchToProps)(TodoForm);
 export default TodoForm;
