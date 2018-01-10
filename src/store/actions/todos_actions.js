@@ -12,6 +12,11 @@ export const toggleTodo = (id) => ({
     id: id
 })
 
+export const deleteTodo = (index) => ({
+    type: STORE_CONSTANTS.ACTIONS.DELETE_TODO,
+    index: index
+})
+
 export const setVisibilityFilter = (filter) => ({
     type: STORE_CONSTANTS.ACTIONS.SET_VISIBILITY_FILTER,
     filter: filter

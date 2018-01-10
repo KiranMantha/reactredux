@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import Todo from './todoItem.component';
 import { connect } from 'react-redux';
 import STORE_CONSTANTS from '../../store/constants';
-import { toggleTodo } from '../../store/actions/todos_actions';
+import { toggleTodo, deleteTodo } from '../../store/actions/todos_actions';
 
 
-const TodoList = ({todos, onTodoClick}) => (
+const TodoList = ({todos, onTodoClick, onDeleteClick}) => (
     <ul>{
         _.map(todos, (todo, index) => {
-            return (<Todo todo={todo} key={index} onclick={onTodoClick}/>)
+            return (<Todo todo={todo} key={index} todoIndex={index} onTodoClick={onTodoClick} onDeleteClick={onDeleteClick}/>)
         })
     }</ul>
 )
@@ -47,6 +47,9 @@ const mapDispatchToProps = dispatch => {
     return {
         onTodoClick: id => {
             dispatch(toggleTodo(id))
+        },
+        onDeleteClick: index => {
+            dispatch(deleteTodo(index))
         }
     }
 }
