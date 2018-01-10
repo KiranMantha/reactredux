@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 
 
 const Todo = ({todo, onTodoClick, todoIndex, onDeleteClick}) => (
-    <li style={{textDecoration: todo.completed ? 'line-through' : 'none'}}><span onClick={()=> {onTodoClick(todo.id)}}>{todo.text}</span> <button onClick={()=>{ onDeleteClick(todoIndex) }}>X</button></li>
+    <li style={{textDecoration: todo.completed ? 'line-through' : 'none'}}>
+        <span onClick={()=> { onTodoClick(todo.id) }}>{todo.text}</span> 
+        <button onClick={()=> { onDeleteClick(todoIndex) }}>X</button>
+    </li>
 )
 
 Todo.propTypes = {
